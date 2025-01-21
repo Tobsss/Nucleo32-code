@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/Tobsss/CEN-414-ASSIGNMENT.git"/>
+		<item value="https://github.com/CorsInterns/STM32.git"/>
+		<item value="https://github.com/corssystem/CorTU-Genesis.git"/>
+	</list>
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+		<item value="bitbucket.org"/>
+	</list>
+</section>

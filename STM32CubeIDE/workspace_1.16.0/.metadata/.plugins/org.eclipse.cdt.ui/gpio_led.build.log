@@ -1,0 +1,10 @@
+12:41:51 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j4 all 
+arm-none-eabi-size  gpio_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    648	      0	   1568	   2216	    8a8	gpio_led.elf
+Finished building: default.size.stdout
+ 
+
+12:41:52 Build Finished. 0 errors, 0 warnings. (took 276ms)
+

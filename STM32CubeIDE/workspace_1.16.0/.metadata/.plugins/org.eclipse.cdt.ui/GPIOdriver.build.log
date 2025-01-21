@@ -1,0 +1,46 @@
+13:10:15 **** Build of configuration Debug for project GPIOdriver ****
+make -j4 all 
+arm-none-eabi-gcc "../driver/src/spi_txonly_arduino.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"driver/src/spi_txonly_arduino.d" -MT"driver/src/spi_txonly_arduino.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "driver/src/spi_txonly_arduino.o"
+arm-none-eabi-gcc "../driver/src/spidebug.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"driver/src/spidebug.d" -MT"driver/src/spidebug.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "driver/src/spidebug.o"
+arm-none-eabi-gcc "../driver/src/stm32l476xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"driver/src/stm32l476xx_gpio_driver.d" -MT"driver/src/stm32l476xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "driver/src/stm32l476xx_gpio_driver.o"
+arm-none-eabi-gcc "../driver/src/stm32l476xx_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"driver/src/stm32l476xx_spi_driver.d" -MT"driver/src/stm32l476xx_spi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "driver/src/stm32l476xx_spi_driver.o"
+../driver/src/stm32l476xx_spi_driver.c: In function 'SPI_SendData':
+../driver/src/stm32l476xx_spi_driver.c:162:13: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+  162 |             while ((pSPIx->SR & SPI_SR_BSY));
+      |             ^~~~~
+../driver/src/stm32l476xx_spi_driver.c:164:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+  164 |                 if((pSPIx-> CR1 & (1 << SPI_CR1_DFF)))
+      |                 ^~
+../driver/src/stm32l476xx_gpio_driver.c: In function 'GPIO_ToggleOutputPin':
+../driver/src/stm32l476xx_gpio_driver.c:323:9: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
+  323 |         delay(300);
+      |         ^~~~~
+../driver/src/spi_txonly_arduino.c: In function 'main':
+../driver/src/spi_txonly_arduino.c:115:36: warning: passing argument 2 of 'SPI_SendData' from incompatible pointer type [-Wincompatible-pointer-types]
+  115 |                 SPI_SendData(SPI2, (uint16_t*)user_data, strlen(user_data));
+      |                                    ^~~~~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    uint16_t * {aka short unsigned int *}
+In file included from C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc/stm32l476xx.h:416,
+                 from ../driver/src/spi_txonly_arduino.c:8:
+C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc/stm32l476xx_spi_driver.h:112:49: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  112 | void SPI_SendData(SPI_RegDef_t *pSPIx, uint8_t *pTxBuffer, uint32_t Len);
+      |                                        ~~~~~~~~~^~~~~~~~~
+arm-none-eabi-gcc "../driver/src/stm32l476xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"driver/src/stm32l476xx_usart_driver.d" -MT"driver/src/stm32l476xx_usart_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "driver/src/stm32l476xx_usart_driver.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32l476rgtx.d" -MT"Startup/startup_stm32l476rgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32l476rgtx.o" "../Startup/startup_stm32l476rgtx.s"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -I"C:/Users/User/STM32CubeIDE/workspace_1.16.0/GPIOdriver/driver/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "GPIOdriver.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\workspace_1.16.0\GPIOdriver\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIOdriver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIOdriver.elf
+ 
+arm-none-eabi-size  GPIOdriver.elf 
+arm-none-eabi-objdump -h -S GPIOdriver.elf  > "GPIOdriver.list"
+   text	   data	    bss	    dec	    hex	filename
+   2340	      0	   1568	   3908	    f44	GPIOdriver.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIOdriver.list
+ 
+
+13:10:28 Build Finished. 0 errors, 3 warnings. (took 12s.946ms)
+
