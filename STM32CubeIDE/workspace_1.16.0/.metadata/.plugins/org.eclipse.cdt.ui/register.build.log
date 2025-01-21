@@ -1,0 +1,10 @@
+14:35:56 **** Incremental Build of configuration Debug for project register ****
+make -j4 all 
+arm-none-eabi-size  register.elf 
+   text	   data	    bss	    dec	    hex	filename
+    800	      0	   1568	   2368	    940	register.elf
+Finished building: default.size.stdout
+ 
+
+14:35:57 Build Finished. 0 errors, 0 warnings. (took 856ms)
+
